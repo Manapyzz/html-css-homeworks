@@ -1,0 +1,72 @@
+@mixin block-property($color, $background-color, $width, $height, $margin) {
+  color: $color;
+  background-color: $background-color;
+  width: $width;
+  height: $height;
+  margin: $margin;
+}
+
+.box {
+  @include block-property(#FFF, #ff0000, 700px, 500px, 20px);
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  position: relative;
+}
+
+.box:nth-of-type(3) .littleBox:first-child {
+  @include block-property(#FFF, #006600, 100px, 100px, 0);
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.box:nth-of-type(3) .littleBox:nth-child(2) {
+  @include block-property(#FFF, #808080, 100px, 100px, 0);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.box:nth-of-type(4) .littleBox:first-child {
+  @include block-property(#FFF, #006600, 100px, 140px, 0);
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.box:nth-of-type(4) .littleBox:nth-child(2) {
+   @include block-property(#FFF, #808080, 100px, 140px, 0);
+   position: absolute;
+   bottom: 0;
+   left: 0;
+}
+
+.box:nth-of-type(4) .littleBox:nth-child(3) {
+  @include block-property(#FFF, #FFF, 100px, 140px, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 1px solid deepskyblue;
+  color: #000;
+  display: table;
+}
+
+.box:nth-of-type(4) .littleBox:nth-child(4) {
+  @include block-property(#FFF, #000, 100px, 140px, 0);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: table;
+}
+
+.littleBox p {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+
+
+
+
