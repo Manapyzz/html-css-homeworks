@@ -1,0 +1,16 @@
+.animatedLoad {
+  stroke-dasharray: 1000;
+  animation: loader 5s linear forwards; }
+
+@keyframes loader {
+  to {
+    stroke-dashoffset: 0; } }
+.animatedRotate {
+  animation: spin 20s linear infinite;
+  transform-origin: center; }
+
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg); } }
+
+/*# sourceMappingURL=styles.css.map */
